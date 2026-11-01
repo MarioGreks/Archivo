@@ -29,6 +29,10 @@
 }
 
 *{box-sizing:border-box}
+/* Sin el destello azul al tocar en el móvil, ni selección de texto al pulsar fichas y botones */
+html{-webkit-tap-highlight-color:transparent}
+summary,button,.boton,.emblema,.saltar{-webkit-user-select:none;user-select:none;-webkit-touch-callout:none}
+::selection{background:rgba(178,176,136,.32);color:inherit}
 body{margin:0;background:var(--fondo);color:var(--texto);font-family:var(--maquina);line-height:1.5}
 #fondo{position:fixed;inset:0;width:100%;height:100%;z-index:-1;pointer-events:none;opacity:.9}
 body::before{content:"";position:fixed;inset:0;z-index:-2;pointer-events:none;background:radial-gradient(ellipse at 50% 15%,rgba(178,176,136,.07),transparent 60%),radial-gradient(ellipse at center,transparent 45%,rgba(0,0,0,.65) 100%)}
