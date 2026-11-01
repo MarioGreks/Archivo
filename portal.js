@@ -25,8 +25,8 @@
       '--cx:' + (52 + (i * 29) % 40) + '%;--cy:' + (-50 + (i * 17) % 40) + 'px;--taza:' + (72 + (i * 13) % 44) + 'px;' +
       '--cinta:' + (4 + (i * 41) % 60) + '%;--cr:' + (i % 2 ? 3 : -4) + 'deg">' +
       '<details class="ficha" id="' + id + '"><summary>' +
-      '<span class="num">Nº ' + n + '</span><span class="tit">' + esc(p.titulo) + (p.version ? ' <small class="ver">v' + esc(p.version) + "</small>" : "") + plats.map(function (x) { return ' <small class="plat">' + esc(x) + "</small>"; }).join("") + "</span>" +
-      '<span class="sello">' + esc(etiquetas[p.tipo] || p.tipo) + '</span><span class="mas" aria-hidden="true">+</span></summary>' +
+      '<span class="num">Nº ' + n + '</span><span class="tit">' + esc(p.titulo) + (p.version ? ' <small class="ver">v' + esc(p.version) + "</small>" : "") + "</span>" +
+      '<span class="sello">' + esc(plats.length ? plats.map(function (x) { return x.split(/[ \/]/)[0]; }).join(" · ") : etiquetas[p.tipo] || p.tipo) + '</span><span class="mas" aria-hidden="true">+</span></summary>' +
       '<div class="cuerpo"><figure class="foto"><div class="img">' + img + "</div>" +
       "<figcaption>" + esc(pie) + "</figcaption></figure>" +
       '<div class="datos"><p class="resumen">' + esc(p.resumen) + "</p>" +
