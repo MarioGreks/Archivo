@@ -16,14 +16,16 @@
       return '<a class="boton' + (e.principal ? " prin" : "") + '" href="' + esc(e.href) + '" target="_blank" rel="noopener">' + esc(e.texto) + "</a>" +
         (e.peso ? '<span class="peso">' + esc(e.peso) + "</span>" : "");
     }).join("") + (p.guia ? '<a class="boton" href="' + esc(p.guia) + '" target="_blank" rel="noopener" aria-label="Guía en PDF de ' + esc(p.titulo) + '">Guía</a>' : "");
-    var meta = [p.estado && "Estado: " + p.estado, p.licencia && "Licencia " + p.licencia].filter(Boolean).join(" · ");
+    var plats = p.plataformas || [];
+    var meta = [plats.length && "Plataforma: " + plats.join(", "), p.estado && "Estado: " + p.estado, p.licencia && "Licencia " + p.licencia].filter(Boolean).join(" · ");
     var pie = p.version ? "Versión " + p.version : p.nota || p.dominio || "sin título";
-    return '<li data-t="' + esc(p.tipo) + '" data-b="' + esc(norm(p.titulo + " " + p.resumen + " " + (etiquetas[p.tipo] || ""))) + '" ' +
+    var claves = plats.map(function (x) { return norm(x).split(/[ \/]/)[0]; }).join(" ");
+    return '<li data-t="' + esc(p.tipo) + '" data-p="' + esc(claves) + '" data-b="' + esc(norm(p.titulo + " " + p.resumen + " " + (etiquetas[p.tipo] || "") + " " + plats.join(" "))) + '" ' +
       'style="--giro:' + (((i * 37) % 9) - 4) / 10 + 'deg;animation-delay:' + i * 70 + 'ms;' +
       '--cx:' + (52 + (i * 29) % 40) + '%;--cy:' + (-50 + (i * 17) % 40) + 'px;--taza:' + (72 + (i * 13) % 44) + 'px;' +
       '--cinta:' + (4 + (i * 41) % 60) + '%;--cr:' + (i % 2 ? 3 : -4) + 'deg">' +
       '<details class="ficha" id="' + id + '"><summary>' +
-      '<span class="num">Nº ' + n + '</span><span class="tit">' + esc(p.titulo) + (p.version ? ' <small class="ver">v' + esc(p.version) + "</small>" : "") + "</span>" +
+      '<span class="num">Nº ' + n + '</span><span class="tit">' + esc(p.titulo) + (p.version ? ' <small class="ver">v' + esc(p.version) + "</small>" : "") + plats.map(function (x) { return ' <small class="plat">' + esc(x) + "</small>"; }).join("") + "</span>" +
       '<span class="sello">' + esc(etiquetas[p.tipo] || p.tipo) + '</span><span class="mas" aria-hidden="true">+</span></summary>' +
       '<div class="cuerpo"><figure class="foto"><div class="img">' + img + "</div>" +
       "<figcaption>" + esc(pie) + "</figcaption></figure>" +
@@ -40,7 +42,7 @@
   function pintar() {
     var q = norm(texto), total = 0;
     filas.forEach(function (li) {
-      var ok = (filtro === "todo" || li.dataset.t === filtro) && (!q || li.dataset.b.indexOf(q) >= 0);
+      var ok = (filtro === "todo" || li.dataset.t === filtro || (" " + li.dataset.p + " ").indexOf(" " + filtro + " ") >= 0) && (!q || li.dataset.b.indexOf(q) >= 0);
       li.hidden = !ok;
       if (ok) total++;
     });

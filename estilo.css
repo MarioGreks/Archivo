@@ -81,6 +81,7 @@ main{max-width:64rem;margin:0 auto;padding:0 1.2rem 3rem}
 .num{font-family:var(--mano);font-weight:700;font-size:1.6rem;line-height:1;color:var(--sello)}
 .tit{font-size:clamp(1.05rem,2.7vw,1.4rem);overflow-wrap:anywhere}
 .ver{margin-left:.5rem;font-size:.75rem;letter-spacing:.08em;color:var(--tinta-suave)}
+.plat{margin-left:.5rem;padding:0 .4rem;border:1px solid var(--tinta-suave);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--tinta-suave);white-space:nowrap}
 .ficha summary:hover .tit{text-decoration:underline;text-decoration-color:var(--sello);text-underline-offset:5px}
 .sello{padding:0 .55rem;border:2px solid var(--sello);color:var(--sello);font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;transform:rotate(-4deg);opacity:.85;mix-blend-mode:multiply}
 .mas{font-family:var(--mano);font-weight:700;font-size:2rem;line-height:1;color:var(--tinta-suave);transition:transform .25s ease}
