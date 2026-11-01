@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480" fill="none" stroke="#2b2418" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+  <defs>
+    <pattern id="tramaA" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="7" stroke="#2b2418" stroke-width="1" opacity="0.55"/>
+    </pattern>
+    <pattern id="tramaR" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(-35)">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#8f3a28" stroke-width="1.3" opacity="0.8"/>
+    </pattern>
+  </defs>
+
+  <!-- órbitas del universo, dibujadas a dos trazos -->
+  <path d="M62 262 C78 150 230 70 360 82 C500 96 600 180 572 276 C548 360 400 414 262 398 C130 384 52 328 62 262 Z" stroke-width="1.6" stroke-dasharray="3 9"/>
+  <path d="M70 252 C96 146 240 78 366 90 C492 104 590 176 566 266 C540 350 396 404 268 388 C142 376 62 322 70 252 Z" stroke-width="1.2" opacity="0.6"/>
+  <path d="M150 120 C240 188 408 196 520 150" stroke-width="1.2" opacity="0.5" stroke-dasharray="2 8"/>
+
+  <!-- ramas entre neuronas (sinapsis) -->
+  <path d="M316 232 C270 200 226 170 188 154"/>
+  <path d="M326 226 C380 200 430 168 468 146" stroke="#8f3a28" stroke-width="3"/>
+  <path d="M330 242 C400 262 450 278 494 298"/>
+  <path d="M312 246 C282 284 254 310 224 330"/>
+  <path d="M302 236 C238 244 178 252 128 262"/>
+  <path d="M324 252 C350 300 380 340 404 376"/>
+  <path d="M192 160 C170 190 150 230 132 258" stroke-width="1.6"/>
+  <path d="M474 152 C500 200 506 250 498 292" stroke-width="1.6"/>
+
+  <!-- ramitas (dendritas) -->
+  <path d="M188 154 l-22 -14 M188 154 l-8 -26 M188 154 l14 -24"/>
+  <path d="M468 146 l24 -16 M468 146 l6 -28 M468 146 l-14 -24" stroke="#8f3a28"/>
+  <path d="M498 298 l26 4 M498 298 l20 22 M498 298 l-6 24"/>
+  <path d="M224 330 l-26 10 M224 330 l-12 24 M224 330 l14 20"/>
+  <path d="M128 262 l-28 -6 M128 262 l-22 20 M128 262 l-2 -26"/>
+  <path d="M404 376 l22 14 M404 376 l-4 26 M404 376 l-22 10"/>
+
+  <!-- neuronas: núcleos con trama -->
+  <path d="M318 206 C340 204 346 232 330 246 C312 258 292 240 296 222 C298 212 306 208 318 206 Z" fill="url(#tramaA)"/>
+  <circle cx="320" cy="228" r="22" stroke-width="1.4" opacity="0.7"/>
+  <path d="M470 126 c14 -2 22 12 14 24 c-9 12 -26 8 -28 -6 c-2 -10 6 -17 14 -18 Z" fill="url(#tramaR)" stroke="#8f3a28"/>
+  <circle cx="188" cy="154" r="14" fill="url(#tramaA)"/>
+  <circle cx="496" cy="298" r="15" fill="url(#tramaA)"/>
+  <path d="M212 318 c14 -6 26 6 20 20 c-6 12 -24 10 -28 -2 c-2 -8 2 -14 8 -18 Z" fill="url(#tramaA)"/>
+  <circle cx="126" cy="262" r="12" fill="url(#tramaA)"/>
+  <circle cx="404" cy="376" r="13" fill="url(#tramaA)"/>
+
+  <!-- estrellas -->
+  <path d="M96 96 l0 12 M90 102 l12 0 M92 98 l8 8 M100 98 l-8 8" stroke-width="1.4"/>
+  <path d="M560 90 l0 10 M555 95 l10 0" stroke-width="1.4"/>
+  <path d="M300 60 l0 8 M296 64 l8 0" stroke-width="1.4"/>
+  <path d="M580 380 l0 8 M576 384 l8 0" stroke-width="1.4"/>
+  <circle cx="420" cy="70" r="2"/><circle cx="60" cy="190" r="2"/><circle cx="262" cy="440" r="2"/><circle cx="580" cy="236" r="2"/>
+
+  <!-- el pilar de Alejandría (abajo a la derecha) -->
+  <g stroke-width="2">
+    <path d="M524 346 L592 344 M520 356 L596 354 M528 344 L526 356 M588 344 L590 354"/>
+    <path d="M534 356 L536 428 M584 354 L582 428"/>
+    <path d="M546 358 L547 426 M558 358 L558 426 M570 357 L569 426" stroke-width="1.2" opacity="0.7"/>
+    <path d="M520 428 L598 428 M514 442 L604 440 M520 428 L516 442 M598 428 L602 440"/>
+    <path d="M528 358 L534 358 M584 356 L590 356" stroke-width="1.4"/>
+  </g>
+  <path d="M536 360 L580 358 L582 426 L536 428 Z" fill="url(#tramaA)" stroke="none" opacity="0.4"/>
+</svg>

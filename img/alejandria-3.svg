@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480" fill="none" stroke="#2b2418" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+  <defs>
+    <pattern id="tramaA" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="7" stroke="#2b2418" stroke-width="1" opacity="0.55"/>
+    </pattern>
+    <pattern id="tramaR" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(-35)">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#8f3a28" stroke-width="1.3" opacity="0.8"/>
+    </pattern>
+  </defs>
+
+  <!-- ventana del instalador -->
+  <path d="M40 70 C150 66 290 72 392 68 C396 160 394 280 392 372 C290 376 150 370 42 374 C38 280 40 160 40 70 Z" stroke-width="2.4"/>
+  <path d="M42 104 C150 102 290 106 392 102" stroke-width="1.8"/>
+  <path d="M56 80 l10 0 l0 12 l-10 0 Z M74 80 l10 0 l0 12 l-10 0 Z M356 80 l10 0 l0 12 l-10 0 Z" stroke-width="1.6"/>
+  <path d="M96 88 l90 0" stroke-width="1.4" opacity="0.7"/>
+
+  <!-- pilar hecho de puntos y rayitas -->
+  <g stroke-width="2.4">
+    <path d="M90 140 l56 0 M96 150 l44 0"/>
+    <path d="M102 160 l0 100 M134 160 l0 100"/>
+    <path d="M112 162 l0 96 M122 162 l0 96" stroke-width="1.2" opacity="0.7"/>
+    <path d="M90 270 l56 0 M84 282 l68 0"/>
+  </g>
+  <path d="M104 162 L132 162 L132 258 L104 258 Z" fill="url(#tramaA)" stroke="none" opacity="0.45"/>
+
+  <!-- barras de progreso -->
+  <path d="M184 150 l-6 0 l0 18 l6 0 M360 150 l6 0 l0 18 l-6 0" stroke-width="1.8"/>
+  <path d="M194 152 l0 14 M204 152 l0 14 M214 152 l0 14 M224 152 l0 14 M234 152 l0 14 M244 152 l0 14 M254 152 l0 14 M264 152 l0 14 M274 152 l0 14" stroke="#8f3a28" stroke-width="2.6"/>
+  <path d="M284 156 l0 6 M294 156 l0 6 M304 156 l0 6 M314 156 l0 6 M324 156 l0 6 M334 156 l0 6 M344 156 l0 6" stroke-width="1.6" opacity="0.7"/>
+
+  <path d="M184 196 l-6 0 l0 18 l6 0 M360 196 l6 0 l0 18 l-6 0" stroke-width="1.8"/>
+  <path d="M194 198 l0 14 M204 198 l0 14 M214 198 l0 14 M224 198 l0 14 M234 198 l0 14 M244 198 l0 14" stroke="#8f3a28" stroke-width="2.6"/>
+  <path d="M254 202 l0 6 M264 202 l0 6 M274 202 l0 6 M284 202 l0 6 M294 202 l0 6 M304 202 l0 6 M314 202 l0 6 M324 202 l0 6 M334 202 l0 6 M344 202 l0 6" stroke-width="1.6" opacity="0.7"/>
+
+  <path d="M184 242 l-6 0 l0 18 l6 0 M360 242 l6 0 l0 18 l-6 0" stroke-width="1.8"/>
+  <path d="M194 248 l0 6 M204 248 l0 6 M214 248 l0 6 M224 248 l0 6 M234 248 l0 6 M244 248 l0 6 M254 248 l0 6 M264 248 l0 6 M274 248 l0 6 M284 248 l0 6 M294 248 l0 6 M304 248 l0 6 M314 248 l0 6 M324 248 l0 6 M334 248 l0 6 M344 248 l0 6" stroke-width="1.6" opacity="0.7"/>
+
+  <path d="M178 296 l176 0 M178 312 l130 0 M178 328 l150 0" stroke-width="1.4" opacity="0.6"/>
+  <path d="M312 338 l54 -2 l2 22 l-54 2 Z" fill="url(#tramaR)" stroke="#8f3a28" stroke-width="1.8"/>
+
+  <!-- cable hacia el chip de la IA local -->
+  <path d="M392 226 C430 226 440 240 468 240" stroke="#8f3a28" stroke-width="2.6" stroke-dasharray="8 6"/>
+
+  <!-- chip -->
+  <path d="M470 180 C510 178 548 182 586 180 C588 214 588 250 586 288 C548 290 510 286 472 290 C468 254 470 214 470 180 Z" stroke-width="2.4"/>
+  <path d="M500 208 C520 206 548 208 556 208 C558 226 558 244 556 262 C536 264 516 262 500 262 C498 244 498 226 500 208 Z" fill="url(#tramaA)" stroke-width="1.8"/>
+  <path d="M470 200 l-16 0 M470 220 l-16 0 M470 240 l-16 0 M470 260 l-16 0 M586 200 l16 0 M586 220 l16 0 M586 240 l16 0 M586 260 l16 0 M492 180 l0 -16 M512 180 l0 -16 M532 180 l0 -16 M552 180 l0 -16 M492 290 l0 16 M512 290 l0 16 M532 290 l0 16 M552 290 l0 16" stroke-width="2"/>
+  <path d="M514 226 l12 -14 l0 10 l12 0 l-12 14 l0 -10 Z" fill="#8f3a28" stroke="none"/>
+
+  <!-- candado: todo se queda en tu equipo -->
+  <path d="M500 354 C500 328 540 328 540 354" stroke-width="2.4"/>
+  <path d="M492 352 L548 350 L550 398 L494 400 Z" stroke-width="2.4" fill="url(#tramaA)"/>
+  <circle cx="521" cy="372" r="5" fill="#8f3a28" stroke="none"/>
+  <path d="M521 376 l0 12" stroke="#8f3a28" stroke-width="2.4"/>
+
+  <!-- onda de red tachada: sin internet -->
+  <path d="M580 350 C596 336 616 336 632 350 M588 362 C598 354 612 354 622 362" stroke-width="2"/>
+  <circle cx="605" cy="374" r="3" fill="#2b2418"/>
+  <path d="M574 330 L636 392" stroke="#8f3a28" stroke-width="3"/>
+</svg>
