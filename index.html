@@ -5,59 +5,59 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Mario Torralba · Portal</title>
 <meta name="description" content="Proyectos de Mario Torralba.">
-<meta name="theme-color" content="#f4f6fb" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#0c0c0b" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#0c0c0b">
 <link rel="icon" type="image/png" href="icon.png">
 <link rel="apple-touch-icon" href="icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Special+Elite&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="estilo.css">
-<script>try { var t = localStorage.getItem("tema"); if (t === "claro" || t === "oscuro") document.documentElement.dataset.tema = t; } catch (e) {}</script>
 </head>
 <body>
 <canvas id="fondo" aria-hidden="true"></canvas>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><filter id="roto" x="-3%" y="-20%" width="106%" height="140%" color-interpolation-filters="sRGB"><feTurbulence type="fractalNoise" baseFrequency=".022" numOctaves="3" seed="5" result="lo"/><feDisplacementMap in="SourceAlpha" in2="lo" scale="7" xChannelSelector="R" yChannelSelector="G" result="forma"/><feMorphology in="forma" operator="erode" radius="2" result="nucleo"/><feTurbulence type="fractalNoise" baseFrequency=".07" numOctaves="3" seed="8" result="hi"/><feColorMatrix in="hi" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 6 -1.7" result="mota"/><feComposite in="forma" in2="mota" operator="in" result="borde"/><feComposite in="nucleo" in2="borde" operator="arithmetic" k2="1" k3="1" result="mascara"/><feComposite in="SourceGraphic" in2="mascara" operator="in" result="papel"/><feMorphology in="mascara" operator="erode" radius="9" result="dentro"/><feGaussianBlur in="dentro" stdDeviation="5" result="dentroS"/><feComposite in="mascara" in2="dentroS" operator="out" result="banda"/><feFlood flood-color="#5e3f1c" flood-opacity=".4" result="marron"/><feComposite in="marron" in2="banda" operator="in" result="tinte"/><feTurbulence type="fractalNoise" baseFrequency=".05" numOctaves="2" seed="2" result="med"/><feColorMatrix in="med" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1.6 .05" result="medA"/><feComposite in="tinte" in2="medA" operator="in" result="mancha0"/><feComposite in="mancha0" in2="SourceAlpha" operator="in" result="mancha"/><feMerge><feMergeNode in="papel"/><feMergeNode in="mancha"/></feMerge></filter><filter id="irregular" x="-20%" y="-20%" width="140%" height="140%"><feTurbulence type="fractalNoise" baseFrequency=".06" numOctaves="2" seed="3"/><feDisplacementMap in="SourceGraphic" scale="7" xChannelSelector="R" yChannelSelector="G"/><feGaussianBlur stdDeviation=".5"/></filter></svg>
 <a class="saltar" href="#contenido">Saltar al contenido</a>
 
-<header class="cabecera">
-  <button id="tema" class="tema" type="button" title="Automático, claro u oscuro">
-    <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18V4c4.41 0 8 3.59 8 8s-3.59 8-8 8z"/></svg>
-    <span class="oculto">Tema: </span><span id="tema-txt">Auto</span>
-  </button>
-  <a class="perfil" href="https://github.com/MarioGreks" target="_blank" rel="noopener" aria-label="Perfil de GitHub">
-    <img class="avatar" src="https://github.com/MarioGreks.png?size=200" alt="Foto de perfil" width="104" height="104"
-         onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'avatar sin',textContent:'M'}))">
+<header class="cab">
+  <a class="emblema" href="https://github.com/MarioGreks" target="_blank" rel="noopener" aria-label="Perfil de GitHub de Mario Torralba">
+    <img src="icon.png" alt="Geco, emblema del archivo" width="168" height="168">
   </a>
-  <h1>Mario Torralba</h1>
-  <p class="lema">«No existe ningún hombre vivo que no sea capaz de hacer más de lo que cree que puede hacer» — Henry Ford</p>
-  <p class="que-es">Mis proyectos: webs, apps y código. <span id="recuento"></span></p>
-  <p class="enlaces"><a href="https://github.com/MarioGreks" target="_blank" rel="noopener">GitHub · MarioGreks</a></p>
-  <nav class="secciones" aria-label="Secciones">
-    <a href="#webs">Webs</a><a href="#apps">Apps</a><a href="#github">GitHub</a>
-  </nav>
+  <div class="cab-txt">
+    <p class="sobre">Archivo de proyectos</p>
+    <h1>Mario Torralba</h1>
+    <blockquote class="nota">
+      «No existe ningún hombre vivo que no sea capaz de hacer más de lo que cree que puede hacer»
+      <cite>— Henry Ford</cite>
+    </blockquote>
+  </div>
 </header>
 
 <main id="contenido" tabindex="-1">
-  <div class="barra-buscar">
-    <div class="buscador">
-      <input id="q" type="search" placeholder="Buscar proyectos…" aria-label="Buscar proyectos" autocomplete="off">
-      <kbd>/</kbd>
+  <div class="barra">
+    <div class="barra-in">
+      <div class="buscador">
+        <input id="q" type="search" placeholder="Buscar en el archivo…" aria-label="Buscar proyectos" autocomplete="off">
+        <kbd>/</kbd>
+      </div>
+      <div class="filtros" role="group" aria-label="Filtrar por tipo">
+        <button type="button" data-f="todo" aria-pressed="true">Todo</button>
+        <button type="button" data-f="web" aria-pressed="false">Web</button>
+        <button type="button" data-f="app" aria-pressed="false">App</button>
+        <button type="button" data-f="trabajo" aria-pressed="false">Trabajo</button>
+        <button type="button" data-f="repo" aria-pressed="false">Repo</button>
+      </div>
+      <p class="contador" id="contador" aria-live="polite"></p>
     </div>
-    <div class="filtros" role="group" aria-label="Filtrar por tipo">
-      <button type="button" data-f="todo" aria-pressed="true">Todo</button>
-      <button type="button" data-f="web" aria-pressed="false">Web</button>
-      <button type="button" data-f="windows" aria-pressed="false">Windows</button>
-      <button type="button" data-f="android" aria-pressed="false">Android</button>
-    </div>
-    <p class="contador" id="contador" aria-live="polite"></p>
   </div>
 
-  <section id="webs"><h2>Webs interactivas</h2><ul class="rejilla" id="lista-webs"></ul></section>
-  <section id="apps"><h2>Apps (Windows y Android)</h2>
-    <p class="nota">Windows puede avisar al abrir un instalador porque no está firmado: pulsa «Más información» y luego «Ejecutar de todas formas».</p>
-    <ul class="rejilla" id="lista-apps"></ul></section>
-  <section id="github"><h2>Proyectos en GitHub</h2><ul class="rejilla" id="lista-github"></ul></section>
-  <p id="vacio" class="nota" hidden>Nada coincide con tu búsqueda.</p>
+  <ol class="archivo" id="archivo"></ol>
+  <p id="vacio" class="vacio" hidden>Nada en el archivo coincide con esa búsqueda.</p>
 </main>
 
-<footer class="pie">© <span id="anio"></span> Mario Torralba · hecho con GitHub Pages</footer>
+<footer class="pie">
+  <a href="https://github.com/MarioGreks" target="_blank" rel="noopener">GitHub · MarioGreks</a>
+  <span>© <span id="anio"></span> Mario Torralba</span>
+</footer>
 
 <script src="proyectos.js"></script>
 <script src="portal.js"></script>
