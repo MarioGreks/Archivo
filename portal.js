@@ -10,19 +10,19 @@
   function ficha(p, i) {
     var id = "e" + i, n = String(i + 1).padStart(2, "0");
     var img = p.imagen
-      ? '<img class="captura" src="' + esc(p.imagen) + '" alt="Captura de ' + esc(p.titulo) + '" loading="lazy">'
+      ? '<img class="captura" src="' + esc(p.imagen) + '" alt="Boceto de ' + esc(p.titulo) + '" loading="lazy">'
       : '<span class="letra" aria-hidden="true">' + esc(p.titulo.charAt(0)) + "</span>";
     var botones = (p.enlaces || []).map(function (e) {
       return '<a class="boton' + (e.principal ? " prin" : "") + '" href="' + esc(e.href) + '" target="_blank" rel="noopener">' + esc(e.texto) + "</a>" +
         (e.peso ? '<span class="peso">' + esc(e.peso) + "</span>" : "");
-    }).join("");
-    var meta = [p.estado && "Estado: " + p.estado, p.version && "Versión " + p.version].filter(Boolean).join(" · ");
+    }).join("") + (p.guia ? '<a class="boton" href="' + esc(p.guia) + '" target="_blank" rel="noopener" aria-label="Guía en PDF de ' + esc(p.titulo) + '">Guía</a>' : "");
+    var meta =[p.estado && "Estado: " + p.estado, p.version && "Versión " + p.version].filter(Boolean).join(" · ");
     return '<li data-t="' + esc(p.tipo) + '" data-b="' + esc(norm(p.titulo + " " + p.resumen + " " + (etiquetas[p.tipo] || ""))) + '" ' +
       'style="--giro:' + (((i * 37) % 9) - 4) / 10 + 'deg;animation-delay:' + i * 70 + 'ms;' +
       '--cx:' + (52 + (i * 29) % 40) + '%;--cy:' + (-50 + (i * 17) % 40) + 'px;--taza:' + (72 + (i * 13) % 44) + 'px;' +
       '--cinta:' + (4 + (i * 41) % 60) + '%;--cr:' + (i % 2 ? 3 : -4) + 'deg">' +
       '<details class="ficha" id="' + id + '"><summary>' +
-      '<span class="num">Nº ' + n + '</span><span class="tit">' + esc(p.titulo) + "</span>" +
+      '<span class="num">Nº ' + n + '</span><span class="tit">' + esc(p.titulo) + (p.version ? ' <small class="ver">v' + esc(p.version) + "</small>" : "") + "</span>" +
       '<span class="sello">' + esc(etiquetas[p.tipo] || p.tipo) + '</span><span class="mas" aria-hidden="true">+</span></summary>' +
       '<div class="cuerpo"><figure class="foto"><div class="img">' + img + "</div>" +
       "<figcaption>" + esc(p.nota || p.dominio || "sin título") + "</figcaption></figure>" +
