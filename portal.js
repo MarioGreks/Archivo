@@ -39,10 +39,19 @@
   raiz.innerHTML = lista.map(ficha).join("");
   var filas = Array.prototype.slice.call(raiz.children);
 
+  function coincide(li, f) { return f === "todo" || li.dataset.t === f || (" " + li.dataset.p + " ").indexOf(" " + f + " ") >= 0; }
+  // Solo se muestran los filtros que tienen alguna ficha; si no hay ninguno útil, se oculta el grupo.
+  var utiles = 0;
+  document.querySelectorAll(".filtros button").forEach(function (b) {
+    b.hidden = !filas.some(function (li) { return coincide(li, b.dataset.f); });
+    if (!b.hidden && b.dataset.f !== "todo") utiles++;
+  });
+  if (utiles < 1) $(".filtros").hidden = true;
+
   function pintar() {
     var q = norm(texto), total = 0;
     filas.forEach(function (li) {
-      var ok = (filtro === "todo" || li.dataset.t === filtro || (" " + li.dataset.p + " ").indexOf(" " + filtro + " ") >= 0) && (!q || li.dataset.b.indexOf(q) >= 0);
+      var ok = coincide(li, filtro) && (!q || li.dataset.b.indexOf(q) >= 0);
       li.hidden = !ok;
       if (ok) total++;
     });
