@@ -16,7 +16,7 @@
       return '<a class="boton' + (e.principal ? " prin" : "") + '" href="' + esc(e.href) + '" target="_blank" rel="noopener">' + esc(e.texto) + "</a>" +
         (e.peso ? '<span class="peso">' + esc(e.peso) + "</span>" : "");
     }).join("") + (p.guia ? '<a class="boton" href="' + esc(p.guia) + '" target="_blank" rel="noopener" aria-label="Guía en PDF de ' + esc(p.titulo) + '">Guía</a>' : "");
-    var meta = p.estado ? "Estado: " + p.estado : "";
+    var meta = [p.estado && "Estado: " + p.estado, p.licencia && "Licencia " + p.licencia].filter(Boolean).join(" · ");
     var pie = p.version ? "Versión " + p.version : p.nota || p.dominio || "sin título";
     return '<li data-t="' + esc(p.tipo) + '" data-b="' + esc(norm(p.titulo + " " + p.resumen + " " + (etiquetas[p.tipo] || ""))) + '" ' +
       'style="--giro:' + (((i * 37) % 9) - 4) / 10 + 'deg;animation-delay:' + i * 70 + 'ms;' +
@@ -61,6 +61,10 @@
   });
 
   $("#anio").textContent = new Date().getFullYear();
+  if (window.ACTUALIZADO) {
+    $("#actualizado").textContent = new Date(window.ACTUALIZADO + "T12:00:00").toLocaleDateString("es-ES", { day: "numeric", month: "long", year: "numeric" });
+    $("#act-sep").hidden = false;
+  }
   pintar();
 
   // Fondo de esporas: motas sueltas que flotan despacio hacia arriba
