@@ -3,7 +3,7 @@
 // imagen: opcional, una captura en img/ (por ejemplo "img/proyecto.jpg"). Sin ella sale un boceto de relleno.
 // Pie de la foto: "Versión X" si hay version; si no, nota (opcional) o dominio.
 // licencia: opcional, el nombre corto de la licencia del repositorio (MIT, GPL-3.0…); sale en la ficha.
-// Fecha de la última subida (la actualiza /subir-portal); sale en el pie.
+// Fecha de la última subida (la actualiza /subir-archivo); sale en el pie.
 window.ACTUALIZADO = "2026-11-01";
 window.PROYECTOS = [
   {
