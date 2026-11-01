@@ -1,7 +1,7 @@
 // Edita esta lista para cambiar el archivo. Cada proyecto es un expediente.
 // tipo: "web", "app", "trabajo" o "repo" (sirve para los filtros).
 // imagen: opcional, una captura en img/ (por ejemplo "img/proyecto.jpg"). Sin ella sale un boceto de relleno.
-// nota: opcional, el pie manuscrito de la foto (si no, usa dominio).
+// Pie de la foto: "Versión X" si hay version; si no, nota (opcional) o dominio.
 window.PROYECTOS = [
   {
     tipo: "app", version: "0.1.0",
