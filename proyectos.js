@@ -7,7 +7,7 @@
 window.ACTUALIZADO = "2026-11-02";
 window.PROYECTOS = [
   {
-    tipo: "app", version: "0.1.4", plataformas: ["Windows 10/11"],
+    tipo: "app", version: "0.1.5", plataformas: ["Windows 10/11"],
     titulo: "Proyecto Alejandría",
     resumen: "Crea tu segundo cerebro: un universo 3D de neuronas de conocimiento, con laboratorios de Python y una IA local que propone conexiones.",
     estado: "Primera versión", licencia: "MIT",
