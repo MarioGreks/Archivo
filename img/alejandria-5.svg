@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480" fill="none" stroke="#2b2418" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+  <defs>
+    <pattern id="tramaA" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="7" stroke="#2b2418" stroke-width="1" opacity="0.55"/>
+    </pattern>
+    <pattern id="tramaR" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(-35)">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#8f3a28" stroke-width="1.3" opacity="0.8"/>
+    </pattern>
+  </defs>
+
+  <!-- tres neuronas: el cuerpo de cada una, a mano -->
+  <path d="M118 90 C164 88 200 126 197 170 C195 214 160 252 117 250 C75 248 41 213 43 167 C45 125 77 92 118 90 Z" stroke-width="2.4"/>
+  <path d="M322 88 C367 91 402 128 399 172 C396 215 363 250 321 252 C277 253 242 216 244 171 C246 127 280 85 322 88 Z" stroke-width="2.4"/>
+  <path d="M522 91 C566 88 602 125 599 170 C597 213 562 249 520 251 C478 252 443 215 445 169 C447 128 480 92 522 91 Z" stroke-width="2.4"/>
+
+  <!-- 1. concepto formal: ejes y una campana con su media -->
+  <path d="M76 214 L76 126 M76 214 L168 214" stroke-width="2"/>
+  <path d="M72 134 L76 126 L80 134 M160 210 L168 214 L160 218" stroke-width="1.6"/>
+  <path d="M80 212 C98 211 106 198 113 172 C119 148 126 138 133 138 C140 138 146 148 152 172 C158 198 166 211 170 212 Z" fill="url(#tramaR)" stroke="#8f3a28" stroke-width="2.2"/>
+  <path d="M133 134 L133 212" stroke-width="1.5" stroke-dasharray="5 5"/>
+  <path d="M96 226 L104 226 M112 226 L121 226 M129 226 L137 226" stroke-width="1.3" opacity="0.7"/>
+
+  <!-- 2. concepto histórico: pergamino y pluma -->
+  <path d="M270 122 C300 118 340 122 374 119 L374 208 C340 212 300 207 270 211 Z" stroke-width="2.2"/>
+  <path d="M270 122 C258 123 256 142 268 144 C275 145 278 136 271 134 M374 208 C386 207 388 190 376 188 C368 187 366 197 373 199" stroke-width="2"/>
+  <path d="M282 138 C298 136 318 140 338 137 M282 152 C300 150 322 154 350 151 M282 166 C296 164 312 168 330 165 M282 180 C298 178 308 182 322 179" stroke-width="1.4" opacity="0.8"/>
+  <path d="M390 104 C410 118 402 160 366 196 C358 172 368 130 390 104 Z" fill="url(#tramaA)" stroke-width="2"/>
+  <path d="M390 104 L352 214" stroke="#8f3a28" stroke-width="2.4"/>
+  <path d="M352 214 l-3 9" stroke="#8f3a28" stroke-width="2.4"/>
+
+  <!-- 3. concepto teórico: una balanza con dos posturas -->
+  <path d="M522 124 L522 218 M500 220 L544 220 M508 226 L536 226" stroke-width="2.2"/>
+  <circle cx="522" cy="118" r="6" stroke-width="2"/>
+  <path d="M468 146 L574 130" stroke-width="2.4"/>
+  <path d="M472 145 L452 188 M472 145 L494 188 M570 131 L550 174 M570 131 L592 174" stroke-width="1.5"/>
+  <path d="M446 188 C452 204 494 204 500 188 Z" fill="url(#tramaA)" stroke-width="2"/>
+  <path d="M544 174 C550 190 592 190 598 174 Z" stroke-width="2"/>
+  <path d="M556 168 L560 158 L566 168 M572 168 L576 160 L582 168" stroke="#8f3a28" stroke-width="1.6"/>
+
+  <!-- sinapsis: de cada neurona a un mismo nodo -->
+  <path d="M118 252 C124 306 238 336 314 394" stroke="#8f3a28" stroke-width="2.6" stroke-dasharray="8 6"/>
+  <path d="M322 254 C320 300 321 346 320 384" stroke="#8f3a28" stroke-width="2.6" stroke-dasharray="8 6"/>
+  <path d="M520 253 C514 306 402 336 326 394" stroke="#8f3a28" stroke-width="2.6" stroke-dasharray="8 6"/>
+  <path d="M306 388 l12 -2 l-2 12 Z M314 378 l6 10 l6 -10 Z M334 388 l-12 -2 l2 12 Z" fill="#8f3a28" stroke="none"/>
+  <circle cx="320" cy="410" r="22" stroke-width="2.4"/>
+  <circle cx="320" cy="410" r="14" fill="url(#tramaA)" stroke-width="1.8"/>
+  <circle cx="320" cy="410" r="4.5" fill="#2b2418" stroke="none"/>
+  <path d="M298 404 C280 398 262 404 246 396 M342 404 C360 398 378 404 394 396 M320 434 C318 446 326 456 322 466" stroke-width="1.6" opacity="0.8"/>
+
+  <!-- adornos de boceto -->
+  <path d="M30 60 l8 0 M34 56 l0 8 M600 56 l8 0 M604 52 l0 8 M590 330 l6 0 M593 327 l0 6 M40 330 l6 0 M43 327 l0 6" stroke-width="1.6" opacity="0.8"/>
+  <circle cx="220" cy="64" r="2.4" fill="#2b2418" stroke="none"/>
+  <circle cx="430" cy="62" r="2.4" fill="#2b2418" stroke="none"/>
+  <circle cx="226" cy="330" r="2" fill="#2b2418" stroke="none"/>
+  <circle cx="416" cy="332" r="2" fill="#2b2418" stroke="none"/>
+</svg>
