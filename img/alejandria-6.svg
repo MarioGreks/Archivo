@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480" fill="none" stroke="#2b2418" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+  <defs>
+    <pattern id="tramaA" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="7" stroke="#2b2418" stroke-width="1" opacity="0.55"/>
+    </pattern>
+    <pattern id="tramaR" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(-35)">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#8f3a28" stroke-width="1.3" opacity="0.8"/>
+    </pattern>
+  </defs>
+
+  <!-- 1. editar: una ficha de neurona y un lápiz que corrige una línea -->
+  <path d="M40 70 C80 66 130 69 186 66 L189 218 C132 222 80 218 37 221 Z" stroke-width="2.4"/>
+  <circle cx="68" cy="98" r="15" stroke-width="2"/>
+  <circle cx="68" cy="98" r="6" fill="url(#tramaA)" stroke-width="1.4"/>
+  <path d="M96 94 C114 92 138 95 164 92 M96 108 C112 106 128 109 144 107" stroke-width="1.6" opacity="0.85"/>
+  <path d="M58 138 C84 136 110 139 168 136 M58 154 C80 152 120 156 168 153 M58 170 C76 168 100 172 120 169" stroke-width="1.4" opacity="0.8"/>
+  <path d="M58 186 C84 184 100 188 122 185" stroke="#8f3a28" stroke-width="2.4"/>
+  <path d="M190 130 L128 196 L118 208 L123 176 L184 112 Z" fill="url(#tramaA)" stroke-width="2.2"/>
+  <path d="M184 112 C190 104 200 108 198 118 L190 130 M123 176 L118 208 L131 200" stroke-width="2"/>
+  <path d="M118 208 L116 214" stroke="#8f3a28" stroke-width="2.6"/>
+
+  <!-- 2. papelera: un cubo del que sale una neurona que vuelve (restaurar) -->
+  <path d="M262 130 L276 232 C300 240 346 240 370 232 L384 130 Z" stroke-width="2.4"/>
+  <path d="M252 130 L394 130 M296 130 C298 118 346 118 348 130" stroke-width="2.2"/>
+  <path d="M290 150 L298 220 M323 150 L323 224 M356 150 L348 220" stroke-width="1.6" opacity="0.8"/>
+  <path d="M268 160 L274 214 C294 222 350 222 372 214 L378 160 Z" fill="url(#tramaA)" stroke="none" opacity="0.35"/>
+  <circle cx="323" cy="82" r="22" stroke-width="2.2"/>
+  <circle cx="323" cy="82" r="9" fill="url(#tramaR)" stroke="#8f3a28" stroke-width="1.8"/>
+  <path d="M323 106 C318 112 328 116 323 122" stroke-width="2" stroke-dasharray="4 4"/>
+  <path d="M390 150 C430 140 438 96 408 84" stroke="#8f3a28" stroke-width="2.6" stroke-dasharray="8 6"/>
+  <path d="M402 94 L408 84 L418 90" stroke="#8f3a28" stroke-width="2.4"/>
+
+  <!-- 3. agenda: una libreta con pestañas y un contacto -->
+  <path d="M452 70 C500 66 560 69 604 66 L607 222 C560 226 500 222 449 225 Z" stroke-width="2.4"/>
+  <path d="M452 70 L449 225" stroke-width="3"/>
+  <path d="M466 70 L464 224" stroke-width="1.2" stroke-dasharray="3 6" opacity="0.7"/>
+  <path d="M607 96 L626 96 L626 120 L607 120 M607 138 L626 138 L626 162 L607 162 M607 180 L626 180 L626 204 L607 204" stroke-width="1.8" fill="url(#tramaA)"/>
+  <circle cx="500" cy="104" r="14" stroke-width="2"/>
+  <path d="M474 150 C478 128 522 128 528 150" stroke-width="2"/>
+  <path d="M542 98 C560 96 576 99 592 97 M542 112 C556 110 570 113 584 111" stroke-width="1.6" opacity="0.85"/>
+  <path d="M478 166 C514 164 556 168 594 165 M478 182 C510 180 540 184 570 181 M478 198 C500 196 524 200 546 197" stroke-width="1.4" opacity="0.8"/>
+  <path d="M580 198 L596 198 L596 208 L580 208 Z" stroke="#8f3a28" stroke-width="2"/>
+
+  <!-- pedir revisión: portapapeles -> flecha -> respuesta con llaves {} -->
+  <path d="M100 292 L216 292 L216 424 L100 424 Z" stroke-width="2.4"/>
+  <path d="M138 286 L178 286 L178 300 L138 300 Z" fill="url(#tramaA)" stroke-width="2"/>
+  <path d="M116 322 C140 320 170 323 200 321 M116 340 C136 338 160 341 200 339 M116 358 C140 356 170 359 190 357 M116 376 C132 374 150 377 168 375" stroke-width="1.5" opacity="0.8"/>
+  <path d="M226 346 C262 320 296 322 328 340" stroke="#8f3a28" stroke-width="2.6" stroke-dasharray="8 6"/>
+  <path d="M318 330 L330 341 L314 346" stroke="#8f3a28" stroke-width="2.4"/>
+  <path d="M338 296 C440 290 548 294 548 336 C548 378 468 382 428 382 L392 410 L394 382 C352 380 338 372 338 336 C338 316 338 304 338 296 Z" stroke-width="2.4"/>
+  <path d="M404 320 C390 322 392 336 386 340 C392 344 390 358 404 360 M482 320 C496 322 494 336 500 340 C494 344 496 358 482 360" stroke="#8f3a28" stroke-width="2.6"/>
+  <path d="M424 332 L424 348 M440 332 L440 348 M456 332 L456 348" stroke-width="2.4" opacity="0.8"/>
+  <path d="M338 296 L338 336" stroke-width="2.4"/>
+
+  <!-- adornos de boceto -->
+  <path d="M26 40 l8 0 M30 36 l0 8 M600 36 l8 0 M604 32 l0 8 M26 452 l8 0 M30 448 l0 8 M604 452 l6 0 M607 449 l0 6" stroke-width="1.6" opacity="0.8"/>
+  <circle cx="230" cy="48" r="2.4" fill="#2b2418" stroke="none"/>
+  <circle cx="420" cy="46" r="2.4" fill="#2b2418" stroke="none"/>
+  <circle cx="250" cy="452" r="2" fill="#2b2418" stroke="none"/>
+  <circle cx="590" cy="276" r="2" fill="#2b2418" stroke="none"/>
+</svg>
