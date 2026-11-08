@@ -11,7 +11,7 @@ window.PROYECTOS = [
     titulo: "Proyecto Alejandría",
     resumen: "Crea tu segundo cerebro: un universo 3D de neuronas de conocimiento, con laboratorios de Python y una IA local que propone conexiones.",
     estado: "En desarrollo", licencia: "MIT",
-    imagen: "img/alejandria.svg", guia: "guias/alejandria.pdf",
+    imagen: "img/alejandria.svg", guia: "guias/alejandria.pdf", video: "videos/alejandria-trailer.mp4",
     enlaces: [
       { texto: "Descargar", href: "https://github.com/MarioGreks/proyecto-alejandria/releases/latest/download/Proyecto-Alejandria-Setup.exe", principal: true, peso: "40,5 MB" },
       { texto: "Ver en GitHub", href: "https://github.com/MarioGreks/proyecto-alejandria" }

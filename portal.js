@@ -15,7 +15,8 @@
     var botones = (p.enlaces || []).map(function (e) {
       return '<a class="boton' + (e.principal ? " prin" : "") + '" href="' + esc(e.href) + '" target="_blank" rel="noopener">' + esc(e.texto) + "</a>" +
         (e.peso ? '<span class="peso">' + esc(e.peso) + "</span>" : "");
-    }).join("") + (p.guia ? '<a class="boton" href="' + esc(p.guia) + '" target="_blank" rel="noopener" aria-label="Guía en PDF de ' + esc(p.titulo) + '">Guía</a>' : "");
+    }).join("") + (p.guia ? '<a class="boton" href="' + esc(p.guia) + '" target="_blank" rel="noopener" aria-label="Guía en PDF de ' + esc(p.titulo) + '">Guía</a>' : "") +
+      (p.video ? '<a class="boton" href="' + esc(p.video) + '" target="_blank" rel="noopener" aria-label="Tráiler en vídeo de ' + esc(p.titulo) + '">Tráiler</a>' : "");
     var plats = p.plataformas || [];
     var meta = [plats.length && "Plataforma: " + plats.join(", "), p.estado && "Estado: " + p.estado, p.licencia && "Licencia " + p.licencia].filter(Boolean).join(" · ");
     var pie = p.version ? "Versión " + p.version : p.nota || p.dominio || "sin título";
