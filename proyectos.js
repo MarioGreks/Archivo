@@ -18,13 +18,13 @@ window.PROYECTOS = [
     ]
   },
   {
-    tipo: "app", version: "1.3.0", plataformas: ["Windows 10/11"],
+    tipo: "app", version: "1.5.0", plataformas: ["Windows 10/11"],
     titulo: "Netrunner Panel",
     resumen: "Despliega desde el borde de la pantalla un panel cyberpunk con tu agenda, correo importante, tiempo, notas y accesos.",
     estado: "En desarrollo", licencia: "MIT",
     imagen: "img/netrunner.svg", guia: "guias/netrunner.pdf",
     enlaces: [
-      { texto: "Descargar para Windows", href: "https://github.com/MarioGreks/netrunner-panel/releases/latest/download/Netrunner-Panel-Setup.exe", principal: true, peso: "4,1 MB" },
+      { texto: "Descargar para Windows", href: "https://github.com/MarioGreks/netrunner-panel/releases/latest/download/Netrunner-Panel-Setup.exe", principal: true, peso: "7,9 MB" },
       { texto: "Ver en GitHub", href: "https://github.com/MarioGreks/netrunner-panel" }
     ]
   }
