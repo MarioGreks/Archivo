@@ -18,7 +18,7 @@ window.PROYECTOS = [
     ]
   },
   {
-    tipo: "app", version: "1.8.0", plataformas: ["Windows 10/11"],
+    tipo: "app", version: "1.8.1", plataformas: ["Windows 10/11"],
     titulo: "Netrunner Panel",
     resumen: "Despliega desde el borde un panel cyberpunk con agenda, correo, tiempo, notas y sistema; arrastra sus tarjetas fuera para verlas en ventana.",
     estado: "En desarrollo", licencia: "MIT",
