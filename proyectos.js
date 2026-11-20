@@ -4,7 +4,7 @@
 // Pie de la foto: "Versión X" si hay version; si no, nota (opcional) o dominio.
 // licencia: opcional, el nombre corto de la licencia del repositorio (MIT, GPL-3.0…); sale en la ficha.
 // Fecha de la última subida (la actualiza /subir-archivo); sale en el pie.
-window.ACTUALIZADO = "2026-11-17";
+window.ACTUALIZADO = "2026-11-20";
 window.PROYECTOS = [
   {
     tipo: "app", version: "0.9.1", plataformas: ["Windows 10/11"],
@@ -18,13 +18,13 @@ window.PROYECTOS = [
     ]
   },
   {
-    tipo: "app", version: "1.5.0", plataformas: ["Windows 10/11"],
+    tipo: "app", version: "1.7.0", plataformas: ["Windows 10/11"],
     titulo: "Netrunner Panel",
-    resumen: "Despliega desde el borde de la pantalla un panel cyberpunk con tu agenda, correo importante, tiempo, notas y accesos.",
+    resumen: "Despliega desde el borde de la pantalla un panel cyberpunk con tu agenda, correo, tiempo, notas, accesos y consumo de Claude.",
     estado: "En desarrollo", licencia: "MIT",
     imagen: "img/netrunner.svg", guia: "guias/netrunner.pdf",
     enlaces: [
-      { texto: "Descargar para Windows", href: "https://github.com/MarioGreks/netrunner-panel/releases/latest/download/Netrunner-Panel-Setup.exe", principal: true, peso: "7,9 MB" },
+      { texto: "Descargar para Windows", href: "https://github.com/MarioGreks/netrunner-panel/releases/latest/download/Netrunner-Panel-Setup.exe", principal: true, peso: "8,3 MB" },
       { texto: "Ver en GitHub", href: "https://github.com/MarioGreks/netrunner-panel" }
     ]
   }
